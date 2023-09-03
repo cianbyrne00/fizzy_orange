@@ -77,7 +77,7 @@ a:link, a:visited
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 .content h1, h2
@@ -169,7 +169,7 @@ a:link, a:visited
 
     .burger_container
     {
-        left: 8px;
+        left: 16px;
         position: absolute;
         margin-right: 16px;
     }
