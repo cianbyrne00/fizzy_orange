@@ -216,6 +216,11 @@ a:link, a:visited
         position: fixed;
     }
 
+    .website_nav .nav_item
+    {
+        display: none;
+    }
+
     .website_nav
     { 
         background-color: antiquewhite;
@@ -235,11 +240,16 @@ a:link, a:visited
         transition: all 0.3s ease-out;
     }
 
-    .nav-active
+    .nav-active 
     {
         background-color: antiquewhite;
         opacity: 1;
         display: flex;
+    }
+
+    .nav-active .nav_item
+    {display: block;
+
     }
 
     .description
