@@ -76,6 +76,7 @@ a:link, a:visited
     width: 100%;
     align-items: center;
     justify-content: center;
+    margin-bottom: 16px;
 }
 
 .content h1, h2
