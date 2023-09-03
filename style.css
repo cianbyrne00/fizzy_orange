@@ -8,6 +8,7 @@ body
     margin: 0;
     background-color: antiquewhite;
     overflow-x: hidden;
+    z-index: 2;
 }
 
 .header
@@ -224,6 +225,7 @@ a:link, a:visited
     .website_nav
     { 
         background-color: antiquewhite;
+        display: none;
         opacity: 0;
         position: fixed;
         height: 80vh;
@@ -237,6 +239,7 @@ a:link, a:visited
         width: 100vw;
         z-index: 5;
         font-size: 3.5vh;
+        z-index: 1;
         transition: all 0.3s ease-out;
     }
 
@@ -244,6 +247,7 @@ a:link, a:visited
     {
         background-color: antiquewhite;
         opacity: 1;
+        z-index: 5;
         display: flex;
     }
 
