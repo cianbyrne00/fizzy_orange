@@ -89,7 +89,7 @@ a, a:link, a:visited
 .album_cover
 {
     margin: 16px 0;
-    height: 540px;
+    width: 360px;
 }
 
 .description
@@ -148,8 +148,7 @@ a, a:link, a:visited
     
     .album_cover
     {
-        width: 300px;
-        height: 300px;
+        width: 320px;
     }
 
     .logo
@@ -260,7 +259,11 @@ a, a:link, a:visited
 
     .toggle .line1
     {
-        transform: rotate(135deg) translate(5px, -6px);
+    }
+
+    .toggle .line2
+    {
+        transform: rotate(45deg);
     }
 
     .toggle .line3
@@ -268,9 +271,5 @@ a, a:link, a:visited
         opacity: 0;
     }
 
-    .toggle .line2
-    {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
 }
 
