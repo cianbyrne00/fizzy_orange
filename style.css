@@ -63,7 +63,7 @@ body
     color:  rgb(225, 110, 56);
 }
 
-a:link, a:visited
+a, a:link, a:visited
 {
     text-decoration: none;
     color: black;
