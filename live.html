@@ -8,6 +8,114 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link href="https://db.onlinewebfonts.com/c/75a46a24b9f930d8c7069dd5a7c05846?family=Rizla+Regular" rel="stylesheet">
+        <style>
+
+            .content
+            {
+                justify-content: flex-start;
+            }
+
+            .event_container
+            {
+                width: 80%;
+                border-style: solid;
+                border-width: 2px 0 0 0;
+                border-color: black;
+                font-size: 18px;
+            }
+
+            .text_container
+            {
+                position: relative;
+                width: calc(100% - 200px);
+                margin: 0;
+                display: inline-flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+
+            .text_container div:nth-child(2)
+            {
+                margin-left: 24px;   
+            }  
+
+            .text_container div:nth-child(4)
+            {
+                margin-right: 24px;   
+            }  
+
+            .text_container div
+            {
+                padding: 16px 0;
+
+            }
+
+            .stream_btn
+            {
+                display: inline-block;
+                float: right;
+                margin: auto;
+                padding: 0;
+                margin: 8px 0;
+                width: 200px;
+            }
+
+            .location_text
+            {
+                margin-right: 24px;
+                text-align: right;
+                justify-self: end;
+                flex: 2;
+            }
+
+            @media only screen and (max-width: 850px)
+            {
+
+                .event_container
+                {
+                    padding: 32px 0;
+                }
+
+                .text_container
+                {
+                    width: 100%;
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+
+                .text_container div
+                {
+                    padding: 8px 0;
+                }
+
+                .stream_btn
+                {
+                    margin: 12px 0;
+                    width: 100%;
+                }
+
+
+                .text_container div:nth-child(2)
+                {
+                    margin-left: 0;   
+                }  
+
+                .text_container div:nth-child(4)
+                {
+                    text-align: left;
+                    margin-right: auto 
+                }  
+
+                .stream_btn:hover
+                {
+                    background-color: black;
+                    width: 100% ;
+                }
+            }
+
+        </style>
     </head>
     <body class="body">
         <div class="header">
@@ -27,7 +135,15 @@
         </div>
         <div class="content">
             <h2> UPCOMING SHOWS</h2>
-          
+            <div class="event_container">
+                <div class="text_container">
+                    <div><b>Ireland Music Week</b></div>
+                    <div>Thurs, October 5th</div>
+                    <div class="location_text"> Workman's Cellar </div>
+                    <div > Dublin, Ireland</div>
+                </div>
+                <a href="https://www.eventbrite.ie/e/ireland-music-week-2023-tickets-637958620407"><button class="stream_btn"> Tickets </button></a>
+            </div>
         </div>
         <div class="footer">
             <a href="https://www.instagram.com/fizzy_orange_/?hl=en"><img class="footer_icn" src="assets/insta.png"/></a>
