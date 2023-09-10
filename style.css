@@ -200,7 +200,7 @@ a:link, a:visited
     {
         width: calc(100% - 64px);
         padding: 32px;
-        min-height: calc(90% - 180px);
+        min-height: calc(100dvh - 270px);
     }
 
     h2
