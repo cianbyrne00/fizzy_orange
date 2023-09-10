@@ -259,6 +259,7 @@ a, a:link, a:visited
 
     .toggle .line1
     {
+        transform: rotate(-45deg);
     }
 
     .toggle .line2
