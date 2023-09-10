@@ -120,7 +120,7 @@ a, a:link, a:visited
 
 .stream_btn:hover
 {
-    width: 320px;   
+    color: antiquewhite;
     transition: all 0.2s linear;
 }
 
