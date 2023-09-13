@@ -58,7 +58,7 @@ body
     transition: all 0.2s linear;
 }
 
-.nav_item:hover, .nav_item .selected
+.nav_item:hover, .selected
 {
     color:  rgb(225, 110, 56);
 }
