@@ -84,6 +84,7 @@ a, a:link, a:visited
 .content h1, h2
 {
     margin: 4px;
+    text-align: center;
 }
 
 .album_cover
