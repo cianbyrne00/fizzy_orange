@@ -71,7 +71,6 @@ a, a:link, a:visited
 
 .content
 {
-    min-height: calc(90% - 190px);
     padding: 28px 0;
     display: flex;
     flex-direction: column;
@@ -200,7 +199,6 @@ a, a:link, a:visited
     {
         width: calc(100% - 64px);
         padding: 32px;
-        min-height: calc(100dvh - 270px);
     }
 
     h2
