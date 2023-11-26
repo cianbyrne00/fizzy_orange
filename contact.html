@@ -10,6 +10,18 @@
         <link href="https://db.onlinewebfonts.com/c/75a46a24b9f930d8c7069dd5a7c05846?family=Rizla+Regular" rel="stylesheet">
         <style>
 
+            h2
+            {
+                text-align: center;
+            }
+
+            #sendMessageBtn
+            {
+                padding: 24px 0;
+                line-height: 4px;
+                margin-left: calc(50% - 150px);
+            }
+
             .stream_btn
             {
                 margin-top: 24px;
@@ -23,6 +35,73 @@
                 }
               
             }
+
+             /* 
+        ======================================================================================================================================================================================================
+        Form Styling
+        ======================================================================================================================================================================================================
+        */
+
+        #contact_container
+        {
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-bottom: 16px;
+            display: flex;
+        }
+
+        #hello_text
+        {
+            margin-top: 32px;
+            font-family: 'Roboto', sans-serif;
+        }  
+
+        .input_field
+        {
+            width: 60%;
+            margin: 16px 20%;
+            font-size: 32px;
+            color: rgb(225, 110, 56);
+            border-color: rgb(225, 110, 56);
+            border-width: 0.1px;
+            border-radius: 0;
+            font-family: 'Jost', sans-serif;
+            resize: none;
+            padding: 8px;
+        }
+
+        @media only screen and (max-width: 750px) 
+        {
+
+        #hello_text
+        {
+            margin-top: 0px;
+        }
+
+        #contact_container
+        {
+            width: 100%;
+        } 
+
+        .input_field
+        {
+            width: calc(100% - 16px);
+            margin: 16px 0;
+            font-size: 20px;
+        }
+
+        #sendMessageBtn
+        {
+            margin-left: 16px;
+            padding: 8px 16px;
+            font-size: 20px;
+            height: auto;
+            line-height: 40px;
+            width: calc(100% - 24px);
+        }
+
+        }
             
         </style>
     </head>
@@ -45,8 +124,18 @@
             </nav>
         </div>
         <div class="content">
-            <h3> <i>Email:</i> babylonire@gmail.com</h3>
-            <a href="mailto:babylonire@gmail.com"><div class="stream_btn" > CONTACT </div></a>
+            <div id="contact_container">
+                <h2> Get in touch below! <br>
+                    babylonire@gmail.com
+                </h2>
+                <form method="post">
+                    <input class="input_field" type="text" placeholder="Name" id="name" autocomplete="off">
+                    <input class="input_field" type="email" placeholder="Email" id="email" autocomplete="off">
+                    <input class="input_field" type="text" placeholder="Subject" id="subject" autocomplete="off">
+                    <textarea class="input_field" id="message" resize="none" placeholder="Message" cols="30" rows="10"></textarea>
+                    <button class="stream_btn" id="sendMessageBtn"> Send Message </button>
+                </form>
+            </div>   
         </div>
         <div class="footer">
             <a href="https://www.instagram.com/fizzy_orange_/?hl=en"><img class="footer_icn" src="assets/insta.png"/></a>
@@ -54,7 +143,34 @@
             <a href="https://music.apple.com/ie/artist/fizzy-orange/1522993197"><img class="footer_icn" src="assets/apple.png"/> </a>  
             <a href="https://www.youtube.com/@fizzyorange5703"><img class="footer_icn" src="assets/youtube.png"/></a>
         </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="app.js"></script>  
+        <script>
+        
+            var btn = document.getElementById('sendMessageBtn');
+            btn.addEventListener('click', function(e){
+                e.preventDefault();
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var subject = document.getElementById('subject').value;
+                var message = document.getElementById('message').value;
+                var body = 
+                `Name: ${name} <br/>
+                Email: ${email} <br/>
+                Subject: ${subject} <br/>
+                Message: ${message} <br/>`
+        
+                Email.send({
+                SecureToken : '22780a33-eb9e-47ac-a147-e852f49d7414',
+                To : 'babylonire@gmail.com',
+                From : 'ciancontactemail@cianbyrne.co.uk',
+                Subject : "Contact Message",
+                Body : body
+                }).then(
+                message => alert("Your message was sent!")
+                );
+            });
+        </script>
     </body>
 
 </html>
