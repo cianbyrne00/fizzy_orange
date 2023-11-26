@@ -22,6 +22,9 @@ body
     height: 100vh;
     width: 100vw;
     margin: 0;
+    color: black;
+    letter-spacing: 2px;
+    /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
     background-color: antiquewhite;
     overflow-x: hidden;
 }
@@ -34,6 +37,7 @@ body
     width: 100%;
     padding: 16px 0;
     padding-bottom: 0px;
+    text-shadow: none;
     background-color: antiquewhite;
 }
 
@@ -129,6 +133,7 @@ a, a:link, a:visited
     height: 40px;
     border: 4px;
     border-color: black;
+    text-shadow: none;
     box-shadow: -5px 5px black;
     background: rgb(225, 110, 56);
     font-size: 24px;
