@@ -211,9 +211,12 @@ a, a:link, a:visited
         text-align: center;
     }
 
-    .stream_btn
-    {
-        width: 200px;
+    input,
+    textarea,
+    button,
+    select,
+    a {
+        -webkit-tap-highlight-color: transparent;
     }
 
     .fixed
@@ -274,6 +277,11 @@ a, a:link, a:visited
     .toggle .line3
     {
         opacity: 0;
+    }
+
+    .spotify
+    {
+        width: 320px;
     }
 
 }
