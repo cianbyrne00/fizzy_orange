@@ -1,7 +1,12 @@
+@font-face {
+    font-family: blazeFace;
+    src: url(OhnoBlazeface-12Point.ttf);
+}
+
 body
 {
     box-sizing: border-box;
-    font-family: 'Ohno Blazeface', sans-serif;
+    font-family: 'blazeFace', sans-serif;
     font-size: 20px;
     height: 100vh;
     width: 100vw;
