@@ -1,13 +1,19 @@
 @font-face {
-    font-family: blazeFace;
-    src: url(Lobster-Regular.ttf);
+    font-family: lobsterTwoReg;
+    src: url(LobsterTwo-Regular.ttf);
+}
+
+@font-face {
+    font-family: lobsterTwoReg-bold;
+    src: url(LobsterTwo-Bold.ttf);
 }
 
 body
 {
     box-sizing: border-box;
-    font-family: 'blazeFace', sans-serif;
+    font-family: 'lobsterTwoReg', sans-serif;
     font-size: 20px;
+    font-weight: lighter;
     height: 100vh;
     width: 100vw;
     margin: 0;
@@ -87,6 +93,11 @@ a, a:link, a:visited
     min-height: calc(90% - 190px);
 }
 
+h1
+{
+    font-family: 'lobsterTwoReg-bold', sans-serif;
+}
+
 .content h1, h2
 {
     margin: 4px;
@@ -102,6 +113,7 @@ a, a:link, a:visited
 
 .description
 {
+    font-family: 'Times New Roman', Times, serif;
     width: 50%;
     font-size: 20px;
     line-height: 28px;
@@ -109,6 +121,7 @@ a, a:link, a:visited
 
 .stream_btn
 {
+    font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
     margin: 16px;
     margin-bottom: 8px;
