@@ -48,7 +48,16 @@ body
 .logo
 {
     height: 100px;
+    margin: 10px 10px;
+    padding: 0px 32px;
+    transition: all 0.4s ease-in;
+}
+
+.logo:hover
+{
     padding: 0 32px;
+    margin: 0;
+    height: 120px;
 }
 
 #desktop_logo
@@ -80,6 +89,7 @@ body
 
 .nav_item:hover, .selected
 {
+    font-size: 28px;
     color:  rgb(225, 110, 56);
 }
 
