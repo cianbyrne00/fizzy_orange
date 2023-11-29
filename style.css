@@ -311,6 +311,7 @@ a, a:link, a:visited
 
     .spotify
     {
+        height: 360px;
         width: 320px;
     }
 
