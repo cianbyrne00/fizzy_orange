@@ -128,9 +128,10 @@ a, a:link, a:visited
 .description
 {
     font-family: 'Times New Roman', Times, serif;
-    width: 50%;
+    width: 705px;
     font-size: 20px;
     line-height: 28px;
+    text-align: justify;
 }
 
 .stream_btn
