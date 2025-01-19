@@ -37,7 +37,6 @@
 
             h2
             {
-                font-size: 4.5vw;
                 text-align: center;
             }
             }
@@ -63,6 +62,12 @@
             font-family: 'Roboto', sans-serif;
         }  
 
+
+        #email_link
+        {
+            text-decoration: underline;
+        }
+
         .input_field
         {
             width: 704px;
@@ -81,6 +86,12 @@
 
         @media only screen and (max-width: 750px) 
         {
+
+        #email_link
+        {
+            font-size: 24px;
+            text-decoration: underline;
+        }
 
         #hello_text
         {
@@ -134,7 +145,7 @@
         <div class="content">
             <div id="contact_container">
                 <h2> Get in touch baby! <br>
-                    babylonire@gmail.com
+                    <b><a id="email_link" href="mailto:babylonire@gmail.com"> babylonire@gmail.com </a> </b>
                 </h2>
                 <form id="form" method="post">
                     <input class="input_field" type="text" placeholder="Name" id="name" autocomplete="off">
