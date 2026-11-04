@@ -1,115 +1,153 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Fizzy Orange</title> 
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-        <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> -->
-        <!-- <link href="https://db.onlinewebfonts.com/c/75a46a24b9f930d8c7069dd5a7c05846?family=Rizla+Regular" rel="stylesheet"> -->
-    </head>
-    <style>
+<!doctype html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join the Fizzy Orange mailing list</title>
+<meta name="description" content="Gig dates and new songs from Fizzy Orange, before anyone else. Sign up in ten seconds.">
+<meta name="theme-color" content="#EE6605">
+<link rel="canonical" href="https://fizzy-orange.pages.dev/join/">
+<meta property="og:title" content="Join the Fizzy Orange mailing list">
+<meta property="og:description" content="Gig dates and new songs, before anyone else. Sign up in ten seconds.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fizzy-orange.pages.dev/join/">
+<meta property="og:image" content="https://fizzy-orange.pages.dev/assets/og-join.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Fizzy Orange logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://fizzy-orange.pages.dev/assets/og-join.jpg">
+<link rel="icon" href="assets/orange-happy.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=DM+Mono:wght@400;500&family=Shrikhand&display=swap" rel="stylesheet">
+<style>
+/* The whole page fits one screen, on every device, with nothing to scroll.
+   Every size is a multiple of --u, a unit that is one hundredth of the screen's height (or a
+   fiftieth of its width, whichever is smaller), so the layout scales as one piece. The logo and
+   the card are spaced evenly: the same gap above, between and below. Phones held sideways are
+   too short for a stack, so there the logo sits beside the card and the card splits in two. */
+:root{
+  --panel:#FBF8F0;--peel:#EE6605;--accent-deep:#C9500C;--accent-deep-hover:#A8430A;--leaf:#5F9A4B;
+  --ink:#1F1A18;--text-secondary:#4A403A;--paper:#EDEBDD;
+  --display:"Shrikhand",Georgia,serif;--body:"Archivo",system-ui,sans-serif;--mono:"DM Mono",ui-monospace,monospace;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --u:min(1vh,1.9vw,13px);
+}
+@supports (height:100dvh){:root{--u:min(1dvh,1.9vw,13px)}}
+*,*::before,*::after{box-sizing:border-box}
+html,body,main,header,section,footer,nav{max-width:100vw;overflow-x:hidden;overflow-x:clip}
+html{height:100%}
+body{margin:0;height:100vh;height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  background:var(--peel) url("assets/peel.webp") center/cover;color:var(--ink);font:400 calc(var(--u)*2.3)/1.4 var(--body)}
+img{max-width:100%;height:auto;display:block}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-.header
+/* the logo as a sticker: a cream backing keeps its orange off the orange page */
+/* each object's hard shadow counts as part of it (the margins), so the gaps you see are the even ones */
+.brand{flex:0 0 auto;margin:0 calc(var(--u)*.5) calc(var(--u)*.5) 0;width:calc(var(--u)*20);filter:drop-shadow(calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--ink))}
+.mascot{display:none}
+main{flex:0 0 auto;margin:0 calc(var(--u)*.9) calc(var(--u)*.9) 0;width:calc(var(--u)*46)}
+.panel{position:relative;display:flex;flex-direction:column;gap:calc(var(--u)*2);background:var(--panel);border:3px solid var(--ink);border-radius:calc(var(--u)*2.6);box-shadow:calc(var(--u)*.9) calc(var(--u)*.9) 0 var(--ink);padding:calc(var(--u)*2.8)}
+.peeker{position:absolute;right:calc(var(--u)*-.6);top:calc(var(--u)*-4.6);width:calc(var(--u)*11.5);transform:rotate(10deg);filter:drop-shadow(calc(var(--u)*.4) calc(var(--u)*.5) 0 var(--ink))}
+.pitch{display:flex;flex-direction:column;gap:calc(var(--u)*1.5);min-width:0}
+.label{align-self:flex-start;font:500 calc(var(--u)*1.45)/1 var(--mono);text-transform:uppercase;letter-spacing:.12em;background:var(--ink);color:var(--paper);padding:calc(var(--u)*1) calc(var(--u)*1.5);border-radius:999px}
+h1{font:400 calc(var(--u)*4.8)/1 var(--display);margin:0;padding-right:calc(var(--u)*8)}
+.lede{margin:0;color:var(--text-secondary)}
+.perks{list-style:none;margin:0;padding:0;display:grid;gap:calc(var(--u)*.8)}
+.perks li{display:flex;gap:calc(var(--u)*1.2);align-items:center;font:700 calc(var(--u)*2)/1.3 var(--body);padding:calc(var(--u)*.8) calc(var(--u)*1.4);border:2px solid var(--ink);border-radius:calc(var(--u)*1.6);background:#fff}
+.perks svg{flex:0 0 auto;width:calc(var(--u)*2.4);height:calc(var(--u)*2.4)}
 
-        .video
-        {
-            width: 706px;
-            height: 403.5px;
-            margin: 24px 0;
-        }
+.act{min-width:0}
+form{display:grid;gap:calc(var(--u)*1.1)}
+/* text inputs stay at 16px or more so iPhones don't zoom in when one is tapped */
+input{font:600 max(16px,calc(var(--u)*2.4))/1.2 var(--body);height:calc(var(--u)*6.2);padding:0 calc(var(--u)*1.8);border:3px solid var(--ink);border-radius:15px;background:#fff;color:var(--ink);width:100%}
+input::placeholder{color:#7d726b}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:calc(var(--u)*6.4);padding:0 calc(var(--u)*2);border:3px solid var(--ink);border-radius:15px;background:var(--accent-deep);color:#fff;font:800 calc(var(--u)*2.5)/1 var(--body);text-decoration:none;cursor:pointer;box-shadow:calc(var(--u)*.5) calc(var(--u)*.5) 0 var(--ink);transition:transform .25s var(--ease-out),box-shadow .25s var(--ease-out),background-color .25s var(--ease-out)}
+.btn:hover{background:var(--accent-deep-hover);transform:translate(-1px,-2px)}
+.btn:disabled{opacity:.6;cursor:progress}
+.btn.ghost{background:#fff;color:var(--ink)}
+.btn.ghost:hover{background:var(--paper)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.form-note{margin:calc(var(--u)*1.3) 0 0;padding:calc(var(--u)*1.5) calc(var(--u)*1.8);border:3px solid var(--ink);border-radius:15px;background:#fff;font:600 calc(var(--u)*2.15)/1.4 var(--body)}
+.form-note.err{border-color:#B3261E;color:#8C1D18}
+.form-note b{font-weight:800;overflow-wrap:anywhere}
+.form-note .note-btns{display:flex;flex-wrap:wrap;gap:calc(var(--u)*1);margin-top:calc(var(--u)*1.3)}
+.form-note .btn{height:calc(var(--u)*5.6);padding:0 calc(var(--u)*1.5);font-size:calc(var(--u)*2);box-shadow:calc(var(--u)*.4) calc(var(--u)*.4) 0 var(--ink)}
+/* a message under the form takes the place of the three perks, so the page still fits the screen */
+.panel:has(.form-note:not([hidden])) .perks{display:none}
+.success{display:none;padding:calc(var(--u)*2) calc(var(--u)*2.2);border:3px solid var(--ink);border-radius:15px;background:var(--leaf);color:#fff;font:700 calc(var(--u)*2.4)/1.4 var(--body);word-break:break-word}
+.sent .success{display:block}
+.sent form,.sent .form-note{display:none}
+[hidden]{display:none!important}
 
-        .song_title
-        {
-            text-wrap: nowrap;
-        }
-
-        .stream_btn
-        {
-            margin-bottom: 58px;
-        }
-
-        .album_cover
-        {
-            transition: all 0.1s ease-in;
-        }
-
-        .album_cover:hover
-        {
-            opacity: 0.6;
-        }
-
-        .may_btn
-        {
-            margin: 16px;
-        }
-
-        @media only screen and (max-width: 750px) {
-
-        .song_title
-        {
-            text-wrap: nowrap;
-            font-size: 36px;
-        }
-
-        .video
-        {
-            width: 320px;
-            height: 185.63px;
-            margin: 4% 0; 
-        }
-            
-        }
-        
-
-    </style>
-    <body class="body">
-        <div class="header">
-            <a href="index.html"><img id="mobile_logo" class="logo" src="assets/logo.webp"/></a>
-            <div class="burger_container">
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </div>
-            <nav class="website_nav">
-                <a href="live.html"><h2 class="nav_item"> Live </h2></a>
-                <a href="contact.html"><h2 class="nav_item"> Contact </h2></a>
-                <a href="index.html"><img  id="desktop_logo" class="logo" src="assets/logo.webp"/></a>
-                <a href="about.html"><h2 class="nav_item"> About </h2></a>
-                <a href="siopa.html"><h2 class="nav_item"> Siopa </h2></a>
-            </nav>
-        </div>
-        <div class="content">
-<!-- 
-            <h1 class="song_title">London Headline</h1>
-            <h2> October 31st </h2>
-            <a href="https://link.dice.fm/L7e7e59337fe"><img class="album_cover" src="assets/londonhootananny.webp"/></a>
-            <a href="https://link.dice.fm/L7e7e59337fe"><div class="stream_btn" > TICKETS </div></a>
-
-            <h1 class="song_title">Dublin Headline</h1>
-            <h2> November 14th </h2>
-            <a href="https://www.thecomplex.ie/event-details/the-depot-sessions-fizzy-orange"><img class="album_cover" src="assets/dublinDepotComplex2025.webp"/></a>
-            <a href="https://www.thecomplex.ie/event-details/the-depot-sessions-fizzy-orange"><div class="stream_btn" > TICKETS </div></a>
-            -->
-            <h1 class="song_title"> Dublin headline </h1>
-            <h2>September 23rd </h2>
-            <a href="https://www.universe.com/events/the-workmans-club-and-sleepover-club-present-fizzy-orange-tickets-ZQNDP1?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaenpIxYXAXvBfZMaonEl1rwa5bAy3U-Mdw8XQpCzCwCjCtM1v7Rtjac6l-TxA_aem_6JBmdY5LHrGBGtg9rAO8Aw&utm_id=97760_v0_s00_e0_tv3"><img class="album_cover" src="assets/workmans2026.jpg"/></a>
-            <a href="https://www.universe.com/events/the-workmans-club-and-sleepover-club-present-fizzy-orange-tickets-ZQNDP1?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAaenpIxYXAXvBfZMaonEl1rwa5bAy3U-Mdw8XQpCzCwCjCtM1v7Rtjac6l-TxA_aem_6JBmdY5LHrGBGtg9rAO8Aw&utm_id=97760_v0_s00_e0_tv3"><div class="stream_btn" > Tickets </div></a>
-        
-        </div>
-        <div class="footer">
-            <a href="https://www.instagram.com/fizzy_orange_/?hl=en"><img class="footer_icn" src="assets/insta.png"/></a>
-            <a href="https://open.spotify.com/artist/1hSt79a7e2OZzSD3pJgtCZ?si=wIj3C6pdSn-4l6H8Abyx6w"><img class="footer_icn" src="assets/spotify.png"/></a>
-            <a href="https://music.apple.com/ie/artist/fizzy-orange/1522993197"><img class="footer_icn" src="assets/apple.png"/> </a>  
-            <a href="https://www.youtube.com/@fizzyorange5703"><img class="footer_icn" src="assets/youtube.png"/></a>
-            <a href="https://www.tiktok.com/@fizzyorangemusic?is_from_webapp=1&sender_device=pc"><img class="footer_icn" src="assets/tiktok.png"/></a>
-        </div>
-        <script src="app.js"></script>  
-    </body>
-
+/* computers and tablets held sideways: a wider card, the two boxes side by side, and everything a
+   little larger, since there is width to spare */
+@media (min-width:900px) and (min-height:541px){
+  :root{--u:min(1.1vh,1.4vw,13px)}
+  @supports (height:100dvh){:root{--u:min(1.1dvh,1.4vw,13px)}}
+  main{width:calc(var(--u)*64)}
+  h1{font-size:calc(var(--u)*5.4);padding-right:calc(var(--u)*10)}
+  form{grid-template-columns:1fr 1.5fr}
+  form .btn{grid-column:1 / -1}
+}
+/* short and wide (a phone on its side, a squat window): the logo sits beside the card, and inside
+   the card the words sit beside the form, with the three perks in a row underneath */
+@media (orientation:landscape) and (max-height:540px){
+  :root{--u:min(1.9vh,1.02vw)}
+  @supports (height:100dvh){:root{--u:min(1.9dvh,1.02vw)}}
+  body{flex-direction:row}
+  .brand{width:calc(var(--u)*20)}
+  main{width:calc(var(--u)*68)}
+  .panel{display:grid;grid-template-columns:1.1fr 1fr;column-gap:calc(var(--u)*3.4);row-gap:calc(var(--u)*1.4);align-items:center;padding:calc(var(--u)*2.8) calc(var(--u)*3.2)}
+  .pitch{display:contents}
+  .label{grid-column:1;justify-self:start}
+  h1{grid-column:1;font-size:calc(var(--u)*4.4);padding-right:0}
+  .lede{grid-column:1}
+  .act{display:contents}
+  form,.success{grid-column:2;grid-row:1 / span 3}
+  .form-note{grid-column:1 / -1;margin:0}
+  .perks{grid-column:1 / -1;grid-template-columns:repeat(3,1fr);margin-top:calc(var(--u)*.8)}
+  .perks li{font-size:calc(var(--u)*1.75);gap:calc(var(--u)*1);padding:calc(var(--u)*.8) calc(var(--u)*1.2)}
+  /* the character would sit on the form's corner here, so it rides above the logo instead */
+  .peeker{display:none}
+  .mascot{display:block;width:calc(var(--u)*11);margin:0 auto calc(var(--u)*.6);transform:rotate(-8deg)}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+<!-- not a link: this page is only for signing up, with no way through to the main site -->
+<div class="brand"><img class="mascot" src="assets/orange-happy.webp" alt="" width="900" height="900"><img src="assets/logo-sticker2.webp" alt="Fizzy Orange" width="900" height="548"></div>
+<main>
+  <div class="panel">
+    <img class="peeker" src="assets/orange-happy.webp" alt="" width="900" height="900">
+    <div class="pitch">
+      <span class="label">Mailing list</span>
+      <h1>Get the fizz first.</h1>
+      <p class="lede"><!--t:list_intro-->Gig dates and new songs, before anyone else.<!--/t--></p>
+      <ul class="perks">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C6 9 13 4 21 4c0 8-5 15-16 17z" fill="#5F9A4B" stroke="#1F1A18" stroke-width="2"/></svg>First to hear about gigs.</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C6 9 13 4 21 4c0 8-5 15-16 17z" fill="#5F9A4B" stroke="#1F1A18" stroke-width="2"/></svg>New songs before release day.</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C6 9 13 4 21 4c0 8-5 15-16 17z" fill="#5F9A4B" stroke="#1F1A18" stroke-width="2"/></svg>No spam. We can't be arsed.</li>
+      </ul>
+    </div>
+    <div class="act" data-signup-box data-email="<!--t:email-->luke@sleepover.club<!--/t-->">
+      <form novalidate>
+        <label class="vh" for="first_name">First name</label>
+        <input id="first_name" name="first_name" type="text" autocomplete="given-name" placeholder="First name" maxlength="40" required>
+        <label class="vh" for="email">Your email</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email" required>
+        <input name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
+        <button class="btn" type="submit">Sign me up</button>
+      </form>
+      <div class="form-note" role="alert" hidden></div>
+      <div class="success" role="status"></div>
+    </div>
+  </div>
+</main>
+<script src="assets/signup.js?v=3" defer></script>
+</body>
 </html>
