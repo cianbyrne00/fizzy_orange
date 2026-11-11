@@ -90,7 +90,7 @@ input::placeholder{color:#7d726b}
   :root{--u:min(1.1vh,1.4vw,13px)}
   @supports (height:100dvh){:root{--u:min(1.1dvh,1.4vw,13px)}}
   main{width:calc(var(--u)*64)}
-  h1{font-size:calc(var(--u)*5.4);padding-right:calc(var(--u)*10)}
+  h1{font-size:calc(var(--u)*5.4);padding-right:0}
   form{grid-template-columns:1fr 1.5fr}
   form .btn{grid-column:1 / -1}
 }
@@ -127,16 +127,16 @@ input::placeholder{color:#7d726b}
     <!-- <img class="peeker" src="https://fizzy-orange.pages.dev/assets/orange-happy.webp" alt="" width="900" height="900">-->
     <div class="pitch"> 
       <h1>Join the fizzy mailing list</h1>
-      <p class="lede">Gig dates and new songs, before anyone else.</p>
+      <p class="lede">Join the fizzy fan club and be first to hear about upcoming gigs, news and music.</p>
       <ul class="perks">
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C6 9 13 4 21 4c0 8-5 15-16 17z" fill="#5F9A4B" stroke="#1F1A18" stroke-width="2"/></svg>First to hear about gigs.</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C6 9 13 4 21 4c0 8-5 15-16 17z" fill="#5F9A4B" stroke="#1F1A18" stroke-width="2"/></svg>New songs before release day.</li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C6 9 13 4 21 4c0 8-5 15-16 17z" fill="#5F9A4B" stroke="#1F1A18" stroke-width="2"/></svg>No spam. No messin'.</li>
-      </ul>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C6 9 13 4 21 4c0 8-5 15-16 17z" fill="#5F9A4B" stroke="#1F1A18" stroke-width="2"/></svg>Exclusive access to demos.</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20C6 9 13 4 21 4c0 8-5 15-16 17z" fill="#5F9A4B" stroke="#1F1A18" stroke-width="2"/></svg>No spam.</li>
+      </ul> 
     </div>
     <div class="act" data-signup-box data-api="https://fizzy-orange.pages.dev" data-email="luke@sleepover.club">
       <form novalidate>
-        <label class="vh" for="first_name">First name</label>
+        <label class="vh" for="first_name">Full name</label>
         <input id="first_name" name="first_name" type="text" autocomplete="given-name" placeholder="First name" maxlength="40" required>
         <label class="vh" for="email">Your email</label>
         <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email" required>
